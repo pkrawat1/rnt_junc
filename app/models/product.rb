@@ -2,7 +2,8 @@ class Product
   include Mongoid::Document
   field :name, type: String
   field :desc, type: String
-  field :photos, type: String
-  field :owner, type: User
-  field :customer, type: User
+  field :mft,  type: Date
+
+  belongs_to :sub_categories
+  belongs_to :owner, class_name: 'User'
 end

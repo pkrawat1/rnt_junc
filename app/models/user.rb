@@ -6,4 +6,5 @@ class User
   field :alt_mobile,  type: String
 
   embeds_many :addresses
+  has_many :products
 end
