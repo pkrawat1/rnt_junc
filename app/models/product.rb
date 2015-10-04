@@ -4,6 +4,7 @@ class Product
   field :desc, type: String
   field :mft,  type: Date
 
-  belongs_to :sub_categories
-  belongs_to :owner, class_name: 'User'
+  belongs_to  :sub_categories
+  belongs_to  :owner, class_name: 'User'
+  has_many    :users_products
 end
