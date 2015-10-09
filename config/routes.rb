@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :categories
 
-  get '/uploads/grid/category/logo/:id/:filename' => 'gridfs#logo'
+  get '/uploads/grid/:class/logo/:id/:filename' => 'gridfs#logo'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

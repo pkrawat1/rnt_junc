@@ -3,10 +3,10 @@ class CategoriesController < ApplicationController
     categories = Category.includes(:sub_categories)
     render json: {
       categories: categories.as_json(
-        only: [:name, :desc, :logo],
+        only: [:_id, :name, :desc, :logo],
         include: {
           sub_categories: {
-            only: :name
+            only: [:_id, :name, :logo]
           }
         }
       )

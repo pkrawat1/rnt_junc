@@ -1,6 +1,6 @@
 class GridfsController < ApplicationController
   def logo
-    logo = Category.find(params[:id]).logo
+    logo = params[:class].classify.constantize.find(params[:id]).logo
     begin
       self.response_body = logo.read
       self.content_type = logo.content_type
