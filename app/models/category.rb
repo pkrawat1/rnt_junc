@@ -9,6 +9,8 @@ class Category
 
   before_save :generate_short_name
 
+  mount_uploader :logo, AvatarUploader
+
   def generate_short_name
     self.s_name = self.name.shortify
   end
