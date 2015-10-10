@@ -84,7 +84,6 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.2)
-    mini_magick (4.3.5)
     mini_portile (0.6.2)
     minitest (5.8.1)
     mongo (2.1.1)
@@ -150,6 +149,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
     remotipart (1.2.1)
+    rmagick (2.15.4)
     rspec-core (3.3.2)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.1)
@@ -203,11 +203,11 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mini_magick
   mongoid (~> 5.0.0)
   rack-cors
   rails (= 4.2.3)
   rails_admin (~> 0.7.0)
+  rmagick
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

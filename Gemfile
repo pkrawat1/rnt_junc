@@ -48,5 +48,5 @@ gem 'rails_admin', '~> 0.7.0'
 gem 'rack-cors'
 
 # Uploading
-gem "mini_magick"
+gem "rmagick"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
