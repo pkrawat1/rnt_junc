@@ -5,4 +5,5 @@ class SubCategory
   mount_uploader :logo, AvatarUploader
   
   belongs_to :category
+  has_many :products
 end

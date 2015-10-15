@@ -1,0 +1,6 @@
+Laptops:
+  -
+    name: 'Acer laptop'
+    desc: 'Core i3, 4GB RAM, 500GB HD'
+    mft: '10jun2014'
+    rent: '2000'
