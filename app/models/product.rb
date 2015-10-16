@@ -1,10 +1,10 @@
 class Product
   include Mongoid::Document
   include Mongoid::Timestamps
-  field :name, type: String
-  field :desc, type: String
-  field :mft,  type: Date
-  field :rent, type: String
+  field :name,      type: String
+  field :desc,      type: String
+  field :mft_date,  type: Date
+  field :rent,      type: String
 
   mount_uploader :logo, AvatarUploader
 
