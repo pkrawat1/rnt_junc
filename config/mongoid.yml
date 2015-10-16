@@ -133,3 +133,13 @@ test:
         read:
           mode: primary
         max_pool_size: 1
+
+production:
+  identity_map_enabled: true #for eager loading to work
+  sessions:
+    default:
+      hosts: 
+        - ds039674.mongolab.com:39674
+      database: heroku_khw1j41r
+      username: pkrawat
+      password: rnt_junc
