@@ -139,7 +139,7 @@ production:
   sessions:
     default:
       hosts: 
-        - ds039674.mongolab.com:39674
-      database: heroku_khw1j41r
+        - ds033419.mongolab.com:33419
+      database: mally_staging
       username: pkrawat
-      password: rnt_junc
+      password: mally_admin
