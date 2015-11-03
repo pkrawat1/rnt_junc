@@ -139,10 +139,7 @@ production:
   clients:
     default:
       hosts: 
-        - ds033499.mongolab.com:33499
-      slaves:
-        - ds051368.mongolab.com:51368
-      read_seddcondary: true
-      database: project_development
+         - ds039674.mongolab.com:39674
+      database: heroku_khw1j41r
       username: pkrawat
-      password: ardproject
+      password: rnt_junc
