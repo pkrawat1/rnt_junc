@@ -2,5 +2,11 @@ Laptops:
   -
     name: 'Acer laptop'
     desc: 'Core i3, 4GB RAM, 500GB HD'
-    mft: '10jun2014'
+    mft_date: '10jun2014'
     rent: '2000'
+Washing Machine:
+  -
+    name: 'Videocon 2015'
+    desc: 'Front Loading with 20 Lts'
+    mft_date: '10oct2015'
+    rent: '500'
