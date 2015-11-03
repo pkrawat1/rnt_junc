@@ -138,8 +138,4 @@ production:
   identity_map_enabled: true #for eager loading to work
   clients:
     default:
-      hosts: 
-         - ds039674.mongolab.com:39674
-      database: heroku_khw1j41r
-      username: pkrawat
-      password: rnt_junc
+      url: <%= ENV['MONGOLAB_URI'] %>
