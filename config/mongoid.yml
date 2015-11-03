@@ -136,7 +136,7 @@ test:
 
 production:
   identity_map_enabled: true #for eager loading to work
-  sessions:
+  clients:
     default:
       hosts: 
         - ds033499.mongolab.com:33499
