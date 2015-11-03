@@ -138,4 +138,4 @@ production:
   identity_map_enabled: true #for eager loading to work
   clients:
     default:
-      url: <%= ENV['MONGOLAB_URI'] %>
+      uri: <%= ENV['MONGOLAB_URI'] %>
