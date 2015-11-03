@@ -7,10 +7,6 @@ class CategoriesController < ApplicationController
   def products
     sub_category = SubCategory.find(params[:sub_category_id])
     products = sub_category.products
-    render json: products.as_json(
-                                    only: [
-                                      :name, :desc, :logo, :rent
-                                      ]
-                                  )
+    render json: products.as_json
   end
 end
