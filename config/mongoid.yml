@@ -139,7 +139,10 @@ production:
   sessions:
     default:
       hosts: 
-        - ds033419.mongolab.com:33419
-      database: mally_staging
+        - ds033499.mongolab.com:33499
+      slaves:
+        - ds051368.mongolab.com:51368
+      read_seddcondary: true
+      database: project_development
       username: pkrawat
-      password: mally_admin
+      password: ardproject
