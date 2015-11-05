@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mally
+  api_key: '154575998441382'
+  api_secret: EMttNrAz9jHNqWMY3tIu7uNkVrE
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: mally
+  api_key: '154575998441382'
+  api_secret: EMttNrAz9jHNqWMY3tIu7uNkVrE
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: mally
+  api_key: '154575998441382'
+  api_secret: EMttNrAz9jHNqWMY3tIu7uNkVrE
+  enhance_image_tag: true
+  static_image_support: false

@@ -49,7 +49,9 @@ gem 'rails_admin', '~> 0.7.0'
 gem 'rack-cors'
 
 # Uploading
-gem "rmagick", require: false
+#gem "rmagick", require: false
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 gem 'rails_12factor'
