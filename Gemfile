@@ -46,7 +46,7 @@ end
 
 gem 'mongoid', '~> 5.0.0'
 gem 'rails_admin', '~> 0.7.0'
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Uploading
 #gem "rmagick", require: false
@@ -55,3 +55,7 @@ gem 'cloudinary'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 gem 'rails_12factor'
+gem 'devise'
+gem 'devise_token_auth'
+gem 'omniauth'
+gem "cancancan"

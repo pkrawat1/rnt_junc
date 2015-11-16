@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class Api::CategoriesController < ApplicationController
   def index
     categories = Category.includes(:sub_categories)
     render json: categories.as_json(include: :sub_categories)

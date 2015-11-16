@@ -6,6 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+user = User.find_or_create_by(
+  email: 'pankajrawat19sept@gmail.com',
+  password: 'admin_for_rntjunc',
+  full_name: 'Pankaj Rawat',
+  mobile: '8793606955',
+  admin: true,
+  role: Role.find_or_create_by(
+    name: :superadmin
+  )
+)
+
 # [
 #  [category, desc, [subcategories]]
 #]

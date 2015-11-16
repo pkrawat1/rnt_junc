@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
-  resources :categories
-  get 'products/:sub_category_id' => 'categories#products'
-  
-  resources :products
+  namespace :api do
+    scope :v1 do
+      mount_devise_token_auth_for "User", at: 'auth'
+      resources :categories
+      get 'products/:sub_category_id' => 'categories#products'
+      resources :products
+    end
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
