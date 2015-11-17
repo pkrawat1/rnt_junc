@@ -29,15 +29,15 @@ module RntJunc
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors", :debug => true, :logger => Rails.logger do
+    config.middleware.use Rack::Cors do
       allow do
         origins '*'
-
         resource '*',
           :headers => :any,
-          :methods => [:get, :post, :delete, :put, :options],
-          :max_age => 0
+          :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+          :methods => [:get, :post, :options, :delete, :put]
       end
     end
+    
   end
 end

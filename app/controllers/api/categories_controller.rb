@@ -1,4 +1,6 @@
 class Api::CategoriesController < ApplicationController
+  before_action :set_current_user
+
   def index
     categories = Category.includes(:sub_categories)
     render json: categories.as_json(include: :sub_categories)
