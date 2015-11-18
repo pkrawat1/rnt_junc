@@ -34,7 +34,7 @@ class Api::AuthController < ApplicationController
     @oauth = "Oauth::#{params['provider'].titleize}".constantize.new(params)     
     if @oauth.authorized?
       @user = User.for_oauth(@oauth)
-      @user && render_success(token: Token.encode(@user.id))
+      @user && render_success({token: Token.encode(@user.id)})
     else
       render_error("There was an error with #{params['provider']}. please try again.")
     end
