@@ -47,7 +47,7 @@ class User
   has_many :products
   has_many :users_products
 
-  validates_presence_of :email, :full_name, :mobile
+  validates_presence_of :email, :full_name
   validates_format_of   :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
   
   belongs_to :role
