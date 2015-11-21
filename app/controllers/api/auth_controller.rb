@@ -41,12 +41,8 @@ class Api::AuthController < ApplicationController
   end
 
   private
-  
-    def twitter_oauth
-      @oauth ||= Oauth::Twitter.new(params)
-    end
 
     def auth_params
-      params.require(:auth).permit(:email, :password, :displayName)
+      params.require(:auth).permit(:email, :password, :full_name)
     end
 end
