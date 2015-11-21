@@ -23,7 +23,7 @@ class Api::AuthController < ApplicationController
   def login
     @user = User.find_by email: params[:email] if params[:email].present?
 
-    if @user && @user.authenticate(params[:password])
+    if @user && @user.valid_password?(params[:password])
       render json: { token: Token.encode(@user.id) }
     else
       render json: { message: 'Invalid credentials' }, status: :unauthorized

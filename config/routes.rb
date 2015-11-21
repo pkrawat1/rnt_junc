@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   namespace :api do
     scope :v1 do
+      post 'auth/login', to: 'auth#login'
+      post 'auth/signup', to: 'auth#signup'
       post 'auth/:provider', to: 'auth#authenticate'
       resources :categories
       get 'products/:sub_category_id' => 'categories#products'
