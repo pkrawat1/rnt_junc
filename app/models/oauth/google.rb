@@ -3,9 +3,9 @@ module Oauth
     ACCESS_TOKEN_URL = 'https://accounts.google.com/o/oauth2/token'
     DATA_URL = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect'
 
-    def get_names
+    def get_full_name
       names = data[:name].try(:split).to_a
-      [data[:given_name] || names.first, data[:family_name] || names.last]
+      "#{data[:given_name] || names.first} #{data[:family_name] || names.last}"
     end
 
     def get_data
