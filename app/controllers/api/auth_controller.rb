@@ -16,8 +16,13 @@ class Api::AuthController < ApplicationController
   end
 
   def signup
-    @user = User.create auth_params
-    render json: { token: Token.encode(@user.id) }
+    @user = User.new auth_params
+    
+    if @user.save
+      render_success({ token: Token.encode(@user.id) })
+    else
+      render json: { message: 'Invalid Credentials'}, status: :unauthorized
+    end
   end
 
   def login
@@ -26,7 +31,7 @@ class Api::AuthController < ApplicationController
     if @user && @user.valid_password?(params[:password])
       render json: { token: Token.encode(@user.id) }
     else
-      render json: { message: 'Invalid credentials' }, status: :unauthorized
+      render json: { message: 'Invalid Credentials' }, status: :unauthorized
     end
   end
 
@@ -43,6 +48,6 @@ class Api::AuthController < ApplicationController
   private
 
     def auth_params
-      params.require(:auth).permit(:email, :password, :full_name)
+      params.require(:auth).permit(:email, :password, :full_name) rescue {}
     end
 end
