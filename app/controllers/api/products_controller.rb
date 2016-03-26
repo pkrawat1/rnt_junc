@@ -1,4 +1,6 @@
 class Api::ProductsController < ApplicationController
+  before_filter :authenticate_user!
+  
   def show
     product = Product.find(params[:id])
     render json: product.as_json
