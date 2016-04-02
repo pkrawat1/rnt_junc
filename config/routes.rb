@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  
+
   namespace :api do
     scope :v1 do
       post 'auth/login', to: 'auth#login'
       post 'auth/signup', to: 'auth#signup'
       post 'auth/:provider', to: 'auth#authenticate'
       resources :categories
-      get 'get_products/:sub_category_id' => 'categories#get_products'
+      get 'products/:sub_category_id' => 'categories#products'
       resources :products
     end
   end
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
