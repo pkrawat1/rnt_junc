@@ -12,5 +12,5 @@ class Product
   belongs_to  :owner, class_name: 'User'
   has_many    :users_products
 
-  validates_presence_of :name, :desc, :mft_date, :rent, :logo
+  validates_presence_of :name, :desc, :mft_date, :rent
 end

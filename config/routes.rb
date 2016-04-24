@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       post 'auth/signup', to: 'auth#signup'
       post 'auth/:provider', to: 'auth#authenticate'
       resources :categories
-      get 'products/:sub_category_id' => 'categories#products'
+      get '/categories/products/:sub_category_id' => 'categories#products'
       resources :products
     end
   end
